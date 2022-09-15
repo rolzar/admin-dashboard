@@ -30,10 +30,73 @@ a{
 /* Header CSS Here */
 .header{
     display: grid;
-    grid: 1fr 1fr/ 3fr 1fr;
-    
+    grid: 1fr 1fr/ 3fr 1fr; 
+    box-shadow: 0 14px 28px  rgba(64, 87, 129,.25), 0 10px 10px rgba(64, 87, 129,.22);
+    position: sticky;
+    top: 0;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    padding-left: 1em;
+}
+
+label >svg{
+    padding-right: .5em;
+
+}
+
+input{
+    border-radius: .3vh;
+    padding: 10px;
+    outline: none;
+    border: none;
+    background-color: #80dfff6a;
+}
+
+.smallName{
+    display: flex ;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 2em;
+}
+
+.smallName, .searchBox{
+    padding-bottom: .7em;
+}
+
+.bigName, .newAction{
+    display: flex;
+    align-items: center;
+    padding: 1em 1em 0;
+
+}
+
+.intro{
+    font-size: .5em;
+    font-weight: bold;
+}
+
+.newAction, .newAction > form{
+    padding-left: 0;
+}
+
+.newAction >form{
+    display: flex;
 }
  
+
+button{
+    border: none;
+    padding: 10px 30px;
+    border-radius: .9vh;
+    background-color: #52ADCC; 
+    margin: 20px 10px;
+    color: white;
+
+}
 /* Sidebar CSS Here */
 
 .sidebar{
@@ -53,7 +116,7 @@ a{
     font-size: 1.5em;     
 }
 
-svg{
+svg, img{
     width: 1em;
     height: 1em;
     padding-right: .5em;
@@ -73,6 +136,8 @@ a > svg{
 ul{
     list-style-type: none;
 }
+
+
 
 .sidebar-menu > ul > li > a{
     color: var(--sidebarMenu);
