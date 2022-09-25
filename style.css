@@ -10,7 +10,8 @@
     --sidebarMenu: #145266;
     --side: #2E7E99;
     --sidebar: #52ADCC;
-    --New-Swatch: #80DFFF;
+    --projectSide: #80DFFF;
+    --searchBack: #80dfff6a;
 }
 
 
@@ -20,7 +21,7 @@
     font-size: 26px;
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: 2fr 10fr 1fr;
+    grid-template-rows: 2fr 10fr .5fr;
 }
 
 a{
@@ -32,7 +33,7 @@ a{
     display: grid;
     grid: 1fr 1fr/ 3fr 1fr; 
     box-shadow: 0 14px 28px  rgba(64, 87, 129,.25), 0 10px 10px rgba(64, 87, 129,.22);
-    position: sticky;
+    /* position: sticky; */
     top: 0;
 }
 
@@ -53,7 +54,7 @@ input{
     padding: 10px;
     outline: none;
     border: none;
-    background-color: #80dfff6a;
+    background-color: var(--searchBack);
 }
 
 .smallName{
@@ -81,6 +82,7 @@ input{
 
 .newAction, .newAction > form{
     padding-left: 0;
+    justify-self: flex-end;
 }
 
 .newAction >form{
@@ -162,20 +164,52 @@ ul{
 /* Content CSS Here */
 .content{
     display: grid;
-    grid: 1fr/ 4fr 1fr
+    grid: 1fr/ 4fr 1fr;
+    padding: 1em;
+    background-color: var(--searchBack);
     
+}
+
+.contTitles{
+    margin: 1em 0em .5em 1.5em; 
+    font-weight: bolder;
 }
 
 .projects{
     display: grid;
     height: 800px;
-    grid-template-columns: repeat(auto-fit ,minmax( 200px ,300px));
+    grid-template-columns: repeat(auto-fit ,minmax( 300px ,400px));
     min-width:0;
     gap: 20px;
     overflow: scroll;
+    margin-left: 1em;
+
 
 }
 
+.title{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.info{
+    font-size: 1.5em;
+    color: rgb(129, 128, 128);
+}
+
 .project{
-    height: 400px;
+    height: 250px;
+    border-left: 10px solid var(--sidebarMenu);
+    box-shadow: 0 14px 28px  rgba(64, 87, 129,.25), 0 10px 10px rgba(64, 87, 129,.22);
+    font-size: .5em;
+    padding: 25px;
+    border-radius: 1vw;
+    background-color: white;
+
+}
+
+/* Right Side Bar */
+.right-sidebar{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
 }
